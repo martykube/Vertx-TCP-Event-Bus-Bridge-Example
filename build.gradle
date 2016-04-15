@@ -1,0 +1,22 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'io.vertx:vertx-core:3.2.1'
+    compile 'io.vertx:vertx-tcp-eventbus-bridge:3.2.1'
+    
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+    compile 'ch.qos.logback:logback-core:1.1.2'
+    compile 'org.slf4j:slf4j-api:1.7.20'
+}
+
+
+task execute(type:JavaExec) {
+    main = 'com.beavercreekconsulting.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    jvmArgs = ['-Dlogback.configurationFile=logback.xml']
+ }
