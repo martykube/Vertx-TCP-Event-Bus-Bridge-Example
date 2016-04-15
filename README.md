@@ -4,9 +4,9 @@ A small project to reproduce an issue.
 
 Start Vertx with "gradle execute".  This process publishes to the event bus.
 
-Then try to subscribe to the event bus with client.py.
+Then try to subscribe to the event bus over the TCP bridge with client.py.
 
-The vertx instance should have the following stack trace
+The vertx instance should have the following stack trace:
 
 
 ```
